@@ -1,0 +1,70 @@
+##1 tail -n +2 nobel.csv | cut -d "," -f 3 | sort -n | uniq -c
+    181 "chemistry"
+     81 "economics"
+    114 "literature"
+    216 "medicine"
+    133 "peace"
+    210 "physics"
+
+#2 tail -n +2 nobel.csv | cut -d "," -f 5-6 | sort -n | uniq -c | sort -n
+## | tail -6
+      2 "Frederick","Sanger"
+      2 "John","Bardeen"
+      2 "Linus Carl","Pauling"
+      2 "Marie","Curie
+      2 "Office of the United Nations High Commissioner for Refugees (UNHCR)",NA
+      3 "Comité international de la Croix Rouge (International Committee of the Red Cross)",NA
+##3 tail -n +2 nobel.csv | cut -d "," -f 6 | sort -n | uniq -d
+"Anderson"
+"Bardeen"
+"Bloch"
+"Bohr"
+"Bragg"
+"Brown"
+"Buck"
+"Chamberlain"
+"Curie
+"Fischer"
+"Frank"
+"Friedman"
+"Hall"
+"Henderson"
+"Hess"
+"Hodgkin"
+"Hoffmann"
+"Jensen"
+"Kendall"
+"Kornberg"
+"Krebs"
+"Lee"
+"Lewis"
+"Marshall"
+"Mistral"
+"Moser"
+"Mott"
+"Müller"
+"Murad"
+"Myrdal"
+NA
+"Pauling"
+"Porter"
+"Richards"
+"Richardson"
+"Sanger"
+"Siegbahn"
+"Simon"
+"Smith"
+"Thomson"
+"Tinbergen"
+"Wiesel"
+"Williams"
+"Wilson"
+
+##4 tail -n +2 nobel.csv | cut -d "," -f 2-3 | uniq -c | grep -w "category" |wc -l
+
+110 "chemistry"
+50 "economic"
+110 "literature"
+109 "medicine"
+99 "peace"
+112 "physics"
